@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom'
 
 class BookShelf extends Component{
   render(){
@@ -46,7 +47,7 @@ class BookShelf extends Component{
                           </select>
                         </div>
                       </div>
-                      <div className="book-title">Ender's Game</div>
+                      <div className="book-title">Ender&apos;s Game</div>
                       <div className="book-authors">Orson Scott Card</div>
                     </div>
                   </li>
@@ -89,7 +90,7 @@ class BookShelf extends Component{
                           </select>
                         </div>
                       </div>
-                      <div className="book-title">Harry Potter and the Sorcerer's Stone</div>
+                      <div className="book-title">Harry Potter and the Sorcerer&apos;s Stone</div>
                       <div className="book-authors">J.K. Rowling</div>
                     </div>
                   </li>
@@ -132,7 +133,7 @@ class BookShelf extends Component{
                           </select>
                         </div>
                       </div>
-                      <div className="book-title">Oh, the Places You'll Go!</div>
+                      <div className="book-title">Oh, the Places You&apos;ll Go!</div>
                       <div className="book-authors">Seuss</div>
                     </div>
                   </li>
