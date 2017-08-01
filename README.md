@@ -1,2 +1,2 @@
 # React-Apps
-My React Native Apps
+This is a collection of the React Native Apps that I have been working on. If you decide to download and use these, the steps to get up and running is pretty simple (provided you have node already installed). Using Command Prompt, navigate to the folder on your machine after downloading/ forking/ cloning; then run npm install. After this you can start the App server to display the app in your browser with either 'npm start' or 'yarn start'
