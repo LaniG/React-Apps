@@ -8,7 +8,6 @@ class BookShelf extends Component{
 let reading = shelfBooks.filter((book) => book.shelf === 'currentlyReading')
 let toRead = shelfBooks.filter((book) => book.shelf === 'wantToRead')
 let haveRead = shelfBooks.filter((book) => book.shelf === 'read')
-console.log(reading)
 
     return(
 
@@ -28,13 +27,14 @@ console.log(reading)
                     <div className="book-top" title={book.subtitle}>
                     <div className="book-cover" style={{ width: 128, height: 193, backgroundImage: `url("${book.imageLinks.thumbnail}")` }}></div>
                     <div className="book-shelf-changer">
-                    <select>
-                    <option value="none" disabled>Move to...</option>
-                    <option value="currentlyReading">Currently Reading</option>
-                    <option value="wantToRead">Want to Read</option>
-                    <option value="read">Read</option>
-                    <option value="none">None</option>
-                    </select>
+                      <select id={book.id} onChange={(event) => console.log(book.title,event.target.value)}>
+                      /**TODO: implement a state updater in with this event handle. */
+                      <option value="none" disabled>Move to...</option>
+                      <option value="currentlyReading">Currently Reading</option>
+                      <option value="wantToRead">Want to Read</option>
+                      <option value="read">Read</option>
+                      <option value="none">None</option>
+                      </select>
                     </div>
                     </div>
                     <div className="book-title">{book.title}</div>
@@ -55,13 +55,14 @@ console.log(reading)
                   <div className="book-top" title={book.subtitle}>
                   <div className="book-cover" style={{ width: 128, height: 193, backgroundImage: `url("${book.imageLinks.thumbnail}")` }}></div>
                   <div className="book-shelf-changer">
-                  <select>
-                  <option value="none" disabled>Move to...</option>
-                  <option value="currentlyReading">Currently Reading</option>
-                  <option value="wantToRead">Want to Read</option>
-                  <option value="read">Read</option>
-                  <option value="none">None</option>
-                  </select>
+                    <select id={book.id} onChange={(event) => console.log(book.title,event.target.value)}>
+                    /**TODO: implement a state updater in with this event handle. */
+                    <option value="none" disabled>Move to...</option>
+                    <option value="currentlyReading">Currently Reading</option>
+                    <option value="wantToRead">Want to Read</option>
+                    <option value="read">Read</option>
+                    <option value="none">None</option>
+                    </select>
                   </div>
                   </div>
                   <div className="book-title">{book.title}</div>
@@ -82,13 +83,14 @@ console.log(reading)
                   <div className="book-top" title={book.subtitle}>
                   <div className="book-cover" style={{ width: 128, height: 193, backgroundImage: `url("${book.imageLinks.thumbnail}")` }}></div>
                   <div className="book-shelf-changer">
-                  <select>
-                  <option value="none" disabled>Move to...</option>
-                  <option value="currentlyReading">Currently Reading</option>
-                  <option value="wantToRead">Want to Read</option>
-                  <option value="read">Read</option>
-                  <option value="none">None</option>
-                  </select>
+                    <select id={book.id} onChange={(event) => console.log(book.title,event.target.value)}>
+                    /**TODO: implement a state updater in with this event handle. */
+                    <option value="none" disabled>Move to...</option>
+                    <option value="currentlyReading">Currently Reading</option>
+                    <option value="wantToRead">Want to Read</option>
+                    <option value="read">Read</option>
+                    <option value="none">None</option>
+                    </select>
                   </div>
                   </div>
                   <div className="book-title">{book.title}</div>

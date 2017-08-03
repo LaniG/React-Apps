@@ -17,7 +17,9 @@ class BooksApp extends Component {
     })
   }
 
+/**TODO: Implement a setState function to update the state with the onChange evtns from the BookShelf.
 
+*/
 
   render() {
 
@@ -26,6 +28,7 @@ class BooksApp extends Component {
         <Route exact path='/' render={() => (
           <BookShelf
             shelfBooks={this.state.books}
+            bookToUpdate={this.bookUpdate}
           />)}/>
 
           <Route exact path='/search' render={() => (
