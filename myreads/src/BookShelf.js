@@ -8,7 +8,7 @@ class BookShelf extends Component{
 let reading = shelfBooks.filter((book) => book.shelf === 'currentlyReading')
 let toRead = shelfBooks.filter((book) => book.shelf === 'wantToRead')
 let haveRead = shelfBooks.filter((book) => book.shelf === 'read')
-console.log(haveRead)
+console.log(reading)
 
     return(
 
@@ -25,7 +25,7 @@ console.log(haveRead)
                   {reading.map((book) => (
                     <li key={book.id}>
                     <div className="book">
-                    <div className="book-top">
+                    <div className="book-top" title={book.subtitle}>
                     <div className="book-cover" style={{ width: 128, height: 193, backgroundImage: `url("${book.imageLinks.thumbnail}")` }}></div>
                     <div className="book-shelf-changer">
                     <select>
@@ -52,7 +52,7 @@ console.log(haveRead)
                 {toRead.map((book) => (
                   <li key={book.id}>
                   <div className="book">
-                  <div className="book-top">
+                  <div className="book-top" title={book.subtitle}>
                   <div className="book-cover" style={{ width: 128, height: 193, backgroundImage: `url("${book.imageLinks.thumbnail}")` }}></div>
                   <div className="book-shelf-changer">
                   <select>
@@ -68,7 +68,7 @@ console.log(haveRead)
                   <div className="book-authors">{book.authors.join()}</div>
                   </div>
                   </li>
-                ))} {/**end of the function to display all the books currently Reading*/}
+                ))} {/**end of the function to display all the books to Read*/}
                 </ol>
               </div>
             </div>
@@ -79,7 +79,7 @@ console.log(haveRead)
                 {haveRead.map((book) => (
                   <li key={book.id}>
                   <div className="book">
-                  <div className="book-top">
+                  <div className="book-top" title={book.subtitle}>
                   <div className="book-cover" style={{ width: 128, height: 193, backgroundImage: `url("${book.imageLinks.thumbnail}")` }}></div>
                   <div className="book-shelf-changer">
                   <select>
@@ -95,7 +95,7 @@ console.log(haveRead)
                   <div className="book-authors">{book.authors.join()}</div>
                   </div>
                   </li>
-                ))} {/**end of the function to display all the books currently Reading*/}
+                ))} {/**end of the function to display all the books that have been Read*/}
                 </ol>
               </div>
             </div>
