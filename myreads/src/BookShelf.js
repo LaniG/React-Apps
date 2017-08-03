@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom'
 
 class BookShelf extends Component{
   render(){
+    const { shelfBooks } = this.props
+console.log(shelfBooks)
     return(
 
       <div className="list-books">
