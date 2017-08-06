@@ -5,9 +5,9 @@ class BookShelf extends Component{
   render(){
     const { shelfBooks, bookToUpdate } = this.props
 
-let reading = shelfBooks.filter((book) => book.shelf === 'currentlyReading')
-let toRead = shelfBooks.filter((book) => book.shelf === 'wantToRead')
-let haveRead = shelfBooks.filter((book) => book.shelf === 'read')
+let reading = shelfBooks.filter((book) => book.shelf === "currentlyReading")
+let toRead = shelfBooks.filter((book) => book.shelf === "wantToRead")
+let haveRead = shelfBooks.filter((book) => book.shelf === "read")
 
     return(
 
@@ -28,7 +28,7 @@ let haveRead = shelfBooks.filter((book) => book.shelf === 'read')
                     <div className="book-cover" style={{ width: 128, height: 193, backgroundImage: `url("${book.imageLinks.thumbnail}")` }}></div>
                     <div className="book-shelf-changer">
                       <select id={book.id} onChange={(event) => bookToUpdate(book, event.target.value)}>
-                      /**TODO: Get this evet handler to pass back data to the Apps component function to update the state */
+                      /**TODO: fix the currently Reading selection now working */
                       <option value="none" disabled>Move to...</option>
                       <option value="currentlyReading">Currently Reading</option>
                       <option value="wantToRead">Want to Read</option>
@@ -56,7 +56,7 @@ let haveRead = shelfBooks.filter((book) => book.shelf === 'read')
                   <div className="book-cover" style={{ width: 128, height: 193, backgroundImage: `url("${book.imageLinks.thumbnail}")` }}></div>
                   <div className="book-shelf-changer">
                     <select id={book.id} onChange={(event) => bookToUpdate(book, event.target.value)}>
-                    /**TODO: Get this evet handler to pass back data to the Apps component function to update the state */
+                    /**TODO: fix the currently Reading selection now working */
                     <option value="none" disabled>Move to...</option>
                     <option value="currentlyReading">Currently Reading</option>
                     <option value="wantToRead">Want to Read</option>
@@ -84,7 +84,7 @@ let haveRead = shelfBooks.filter((book) => book.shelf === 'read')
                   <div className="book-cover" style={{ width: 128, height: 193, backgroundImage: `url("${book.imageLinks.thumbnail}")` }}></div>
                   <div className="book-shelf-changer">
                     <select id={book.id} onChange={(event) => bookToUpdate(book, event.target.value)}>
-                    /**TODO: Get this evet handler to pass back data to the Apps component function to update the state */
+                    /**TODO: fix the currently Reading selection now working */
                     <option value="none" disabled>Move to...</option>
                     <option value="currentlyReading">Currently Reading</option>
                     <option value="wantToRead">Want to Read</option>

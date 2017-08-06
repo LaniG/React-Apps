@@ -17,9 +17,17 @@ class BooksApp extends Component {
     })
   }
 
-  /*TODO: I cannot get this function to properly update my state. I need to re-visit how to get an update to the state form the components*/
+  /*TODO: fix the currently Reading selection now working*/
 
-bookUpdate = (book, newShelf) => {  this.setState(book.shelf: newShelf)}
+bookUpdate = (book, shelf) => {
+  console.log(book.shelf)
+  console.log(shelf)
+  book.shelf = shelf
+  console.log(book.shelf)
+  this.setState({books: this.state.books.filter((b) => b.id !== book.id).concat([book]) })
+  BooksAPI.update(book,shelf)
+
+}
 
   render() {
 
@@ -28,7 +36,7 @@ bookUpdate = (book, newShelf) => {  this.setState(book.shelf: newShelf)}
         <Route exact path='/' render={() => (
           <BookShelf
             shelfBooks={this.state.books}
-            bookToUpdate={this.bookUpdate} /**TODO: why is this not updating the state?*/
+            bookToUpdate={this.bookUpdate}
           />)}/>
 
           <Route exact path='/search' render={() => (
