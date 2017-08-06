@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom'
 
 class BookSearch extends Component{
   render(){
-    const { searchBooks } = this.props
-console.log(searchBooks)
+  //  const { searchBooks } = this.props
+
     return(
 
       <div className="search-books">
@@ -20,9 +20,6 @@ console.log(searchBooks)
               you don't find a specific author or title. Every search is limited by search terms.
             */}
 
-            /**
-            TODO: start working on implementing the regex search function
-            */
             <input type="text" placeholder="Search by title or author"/>
 
           </div>

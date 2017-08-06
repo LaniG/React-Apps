@@ -17,9 +17,9 @@ class BooksApp extends Component {
     })
   }
 
-/**TODO: Implement a setState function to update the state with the onChange evtns from the BookShelf.
+  /*TODO: I cannot get this function to properly update my state. I need to re-visit how to get an update to the state form the components*/
 
-*/
+bookUpdate = (book, newShelf) => {  this.setState(book.shelf: newShelf)}
 
   render() {
 
@@ -28,7 +28,7 @@ class BooksApp extends Component {
         <Route exact path='/' render={() => (
           <BookShelf
             shelfBooks={this.state.books}
-            bookToUpdate={this.bookUpdate}
+            bookToUpdate={this.bookUpdate} /**TODO: why is this not updating the state?*/
           />)}/>
 
           <Route exact path='/search' render={() => (
