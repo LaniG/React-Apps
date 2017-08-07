@@ -27,7 +27,7 @@ let haveRead = shelfBooks.filter((book) => book.shelf === "read")
                     <div className="book-top" title={book.subtitle}>
                     <div className="book-cover" style={{ width: 128, height: 193, backgroundImage: `url("${book.imageLinks.thumbnail}")` }}></div>
                     <div className="book-shelf-changer">
-                      <select id={book.id} onChange={(event) => bookToUpdate(book, event.target.value)}>
+                      <select id={book.id} defaultValue={book.shelf} onChange={(event) => bookToUpdate(book, event.target.value)}>
                       <option value="none" disabled>Move to...</option>
                       <option value="currentlyReading">Currently Reading</option>
                       <option value="read">Read</option>
@@ -54,11 +54,11 @@ let haveRead = shelfBooks.filter((book) => book.shelf === "read")
                   <div className="book-top" title={book.subtitle}>
                   <div className="book-cover" style={{ width: 128, height: 193, backgroundImage: `url("${book.imageLinks.thumbnail}")` }}></div>
                   <div className="book-shelf-changer">
-                    <select id={book.id} onChange={(event) => bookToUpdate(book, event.target.value)}>
+                    <select id={book.id} defaultValue={book.shelf} onChange={(event) => bookToUpdate(book, event.target.value)}>
                     <option value="none" disabled>Move to...</option>
-                    <option value="wantToRead">Want to Read</option>
                     <option value="currentlyReading">Currently Reading</option>
                     <option value="read">Read</option>
+                    <option value="wantToRead">Want to Read</option>
                     <option value="none">None</option>
                     </select>
                   </div>
@@ -81,11 +81,11 @@ let haveRead = shelfBooks.filter((book) => book.shelf === "read")
                   <div className="book-top" title={book.subtitle}>
                   <div className="book-cover" style={{ width: 128, height: 193, backgroundImage: `url("${book.imageLinks.thumbnail}")` }}></div>
                   <div className="book-shelf-changer">
-                    <select id={book.id} onChange={(event) => bookToUpdate(book, event.target.value)}>
+                    <select id={book.id} defaultValue={book.shelf} onChange={(event) => bookToUpdate(book, event.target.value)}>
                     <option value="none" disabled>Move to...</option>
+                    <option value="currentlyReading">Currently Reading</option>
                     <option value="read">Read</option>
                     <option value="wantToRead">Want to Read</option>
-                    <option value="currentlyReading">Currently Reading</option>
                     <option value="none">None</option>
                     </select>
                   </div>
