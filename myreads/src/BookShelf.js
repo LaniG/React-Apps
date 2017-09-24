@@ -1,5 +1,6 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
+import BookSection from './BookSection'
 
 class BookShelf extends Component{
   render(){
@@ -17,6 +18,12 @@ let haveRead = shelfBooks.filter((book) => book.shelf === "read")
         </div>
         <div className="list-books-content">
           <div>
+
+          <BookSection title="Currently Reading" books={this.reading}/>
+          <BookSection title="Want To Read" books={this.toRead}/>
+          <BookSection title="Read" books={this.haveRead}/>
+
+
             <div className="bookshelf">
               <h2 className="bookshelf-title">Currently Reading</h2>
               <div className="bookshelf-books">
@@ -40,7 +47,7 @@ let haveRead = shelfBooks.filter((book) => book.shelf === "read")
                     <div className="book-authors">{book.authors.join()}</div>
                     </div>
                     </li>
-                  ))} {/**end of the function to display all the books currently Reading*/}
+                  ))}
                 </ol>
               </div>
             </div>
@@ -67,7 +74,7 @@ let haveRead = shelfBooks.filter((book) => book.shelf === "read")
                   <div className="book-authors">{book.authors.join()}</div>
                   </div>
                   </li>
-                ))} {/**end of the function to display all the books to Read*/}
+                ))}
                 </ol>
               </div>
             </div>
@@ -94,10 +101,11 @@ let haveRead = shelfBooks.filter((book) => book.shelf === "read")
                   <div className="book-authors">{book.authors.join()}</div>
                   </div>
                   </li>
-                ))} {/**end of the function to display all the books that have been Read*/}
+                ))}
                 </ol>
               </div>
             </div>
+
           </div>
         </div>
         <div className="open-search">
